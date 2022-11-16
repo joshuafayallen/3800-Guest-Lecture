@@ -1076,8 +1076,8 @@ knitr::kable(format = "html")
 ```{r skeleton-participants, eval = FALSE, echo = TRUE}
 ## be sure you have done 
 ## install.packages("gapminder")
-## library(gapminder)
-
+library(gapminder)
+library(ggplot2)
 ggplot() +
   geom_point(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp))
 
