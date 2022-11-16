@@ -1765,6 +1765,17 @@ The `scale_*()` components control the properties of all the<br><b class='simple
 
 ------------------------------------------------------------------------
 
+:::{.notes}
+Position scales are used to control the locations of visual entities in a plot, and how those locations are mapped to data values. Every plot has two position scales, corresponding to the x and y aesthetics. In most cases this is clear in the plot specification, because the user explicitly specifies the variables mapped to x and y explicitly. 
+
+Colors are also another form of a scale. To keep it simple basically what is going on is that R is mapping each point point to a specific color. For both kinds of color scales this is done via fitting to the point through a colorspace 
+
+
+
+
+:::
+
+
 ![Illustration by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)](pics/continuous_discrete.png){fig-size="120%" fig-align="center" fig-alt="Allison Horsts illustration ofthe correct use of continuous versus discrete; however, in {ggplot2} these are interpeted in a different way: as quantitative and qualitative."}
 
 ## Continuous vs. Discrete in {ggplot2}
