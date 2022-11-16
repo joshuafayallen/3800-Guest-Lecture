@@ -1468,7 +1468,7 @@ And
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_918edb86" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_c5248df8" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1894,7 +1894,7 @@ Explanation
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_42378244" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_da2bd3d3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -2118,7 +2118,7 @@ Explanation
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_20a14468" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_8a636c47" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -2159,7 +2159,7 @@ Explanation
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-28-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"><div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_99d00233" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a372d078" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -2199,7 +2199,7 @@ Explanation
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-31-1.png" width="1000" class="r-stretch quarto-figure-center"><div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_b92b2917" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_ed32103b" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -3029,19 +3029,54 @@ Title of size legend
 </section>
 <section id="changing-the-default-theme" class="slide level2">
 <h2>Changing the Default Theme</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="theme_minimal">theme_minimal</h3>
-<div class="cell">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1"></a><span class="fu">ggplot</span>(gapminder, </span>
+<span id="cb110-2"><a href="#cb110-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb110-3"><a href="#cb110-3"></a>        <span class="at">y =</span> lifeExp, </span>
+<span id="cb110-4"><a href="#cb110-4"></a>           <span class="at">color =</span> continent,</span>
+<span id="cb110-5"><a href="#cb110-5"></a>            <span class="at">size =</span> pop)) <span class="sc">+</span></span>
+<span id="cb110-6"><a href="#cb110-6"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb110-7"><a href="#cb110-7"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb110-8"><a href="#cb110-8"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Health and wealth grow together"</span>,</span>
+<span id="cb110-9"><a href="#cb110-9"></a>       <span class="at">subtitle =</span> <span class="st">"Data from 2007"</span>,</span>
+<span id="cb110-10"><a href="#cb110-10"></a>       <span class="at">x =</span> <span class="st">"Wealth (GDP per capita)"</span>,</span>
+<span id="cb110-11"><a href="#cb110-11"></a>       <span class="at">y =</span> <span class="st">"Health (life expectancy)"</span>,</span>
+<span id="cb110-12"><a href="#cb110-12"></a>       <span class="at">color =</span> <span class="st">"Continent"</span>,</span>
+<span id="cb110-13"><a href="#cb110-13"></a>       <span class="at">size =</span> <span class="st">"Population"</span>,</span>
+<span id="cb110-14"><a href="#cb110-14"></a>       <span class="at">caption =</span> <span class="st">"Source: The Gapminder Project"</span>) <span class="sc">+</span> </span>
+<span id="cb110-15"><a href="#cb110-15"></a>       <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/theme-minimal-theme-out-1.png" width="1000"></p>
+<p><img data-src="index_files/figure-revealjs/theme-minimal-theme-out-1.png" style="width:80.0%"></p>
 </div>
 </div>
-</div><div class="column" style="width:45%;">
-<h3 id="theme_dark">theme_dark</h3>
+<div class="fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1"></a><span class="fu">ggplot</span>(gapminder, </span>
+<span id="cb111-2"><a href="#cb111-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb111-3"><a href="#cb111-3"></a>        <span class="at">y =</span> lifeExp, </span>
+<span id="cb111-4"><a href="#cb111-4"></a>           <span class="at">color =</span> continent,</span>
+<span id="cb111-5"><a href="#cb111-5"></a>            <span class="at">size =</span> pop)) <span class="sc">+</span></span>
+<span id="cb111-6"><a href="#cb111-6"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb111-7"><a href="#cb111-7"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb111-8"><a href="#cb111-8"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Health and wealth grow together"</span>,</span>
+<span id="cb111-9"><a href="#cb111-9"></a>       <span class="at">subtitle =</span> <span class="st">"Data from 2007"</span>,</span>
+<span id="cb111-10"><a href="#cb111-10"></a>       <span class="at">x =</span> <span class="st">"Wealth (GDP per capita)"</span>,</span>
+<span id="cb111-11"><a href="#cb111-11"></a>       <span class="at">y =</span> <span class="st">"Health (life expectancy)"</span>,</span>
+<span id="cb111-12"><a href="#cb111-12"></a>       <span class="at">color =</span> <span class="st">"Continent"</span>,</span>
+<span id="cb111-13"><a href="#cb111-13"></a>       <span class="at">size =</span> <span class="st">"Population"</span>,</span>
+<span id="cb111-14"><a href="#cb111-14"></a>       <span class="at">caption =</span> <span class="st">"Source: The Gapminder Project"</span>) <span class="sc">+</span></span>
+<span id="cb111-15"><a href="#cb111-15"></a>       <span class="fu">theme_dark</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/theme-dark-theme-out-1.png" width="1000"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-42-1.png" style="width:80.0%"></p>
+</div>
 </div>
 </div>
 </div>
@@ -3064,10 +3099,10 @@ Title of size legend
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1"></a><span class="fu">theme_bw</span>() <span class="sc">+</span> </span>
-<span id="cb110-2"><a href="#cb110-2"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb110-3"><a href="#cb110-3"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb110-4"><a href="#cb110-4"></a>      <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"italic"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1"></a><span class="fu">theme_bw</span>() <span class="sc">+</span> </span>
+<span id="cb112-2"><a href="#cb112-2"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb112-3"><a href="#cb112-3"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb112-4"><a href="#cb112-4"></a>      <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"italic"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="so-can-you" class="slide level2">
@@ -3075,26 +3110,26 @@ Title of size legend
 <div class="columns">
 <div class="column">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1"></a><span class="fu">ggplot</span>(gapminder, </span>
-<span id="cb111-2"><a href="#cb111-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
-<span id="cb111-3"><a href="#cb111-3"></a>        <span class="at">y =</span> lifeExp, </span>
-<span id="cb111-4"><a href="#cb111-4"></a>           <span class="at">color =</span> continent,</span>
-<span id="cb111-5"><a href="#cb111-5"></a>            <span class="at">size =</span> pop)) <span class="sc">+</span></span>
-<span id="cb111-6"><a href="#cb111-6"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb111-7"><a href="#cb111-7"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
-<span id="cb111-8"><a href="#cb111-8"></a><span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Health and wealth grow together"</span>,</span>
-<span id="cb111-9"><a href="#cb111-9"></a>     <span class="at">subtitle =</span> <span class="st">"Data from 1952 to 2007"</span>,</span>
-<span id="cb111-10"><a href="#cb111-10"></a>     <span class="at">x =</span> <span class="st">"Wealth (GDP per capita)"</span>,</span>
-<span id="cb111-11"><a href="#cb111-11"></a>     <span class="at">y =</span> <span class="st">"Health (life expectancy)"</span>,</span>
-<span id="cb111-12"><a href="#cb111-12"></a>     <span class="at">color =</span> <span class="st">"Continent"</span>,</span>
-<span id="cb111-13"><a href="#cb111-13"></a>     <span class="at">size =</span> <span class="st">"Population"</span>,</span>
-<span id="cb111-14"><a href="#cb111-14"></a>  <span class="at">caption =</span> <span class="st">"Source: The Gapminder Project"</span>) <span class="sc">+</span></span>
-<span id="cb111-15"><a href="#cb111-15"></a>    <span class="fu">theme_allen_bw</span>(<span class="at">has_subtitle =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1"></a><span class="fu">ggplot</span>(gapminder, </span>
+<span id="cb113-2"><a href="#cb113-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb113-3"><a href="#cb113-3"></a>        <span class="at">y =</span> lifeExp, </span>
+<span id="cb113-4"><a href="#cb113-4"></a>           <span class="at">color =</span> continent,</span>
+<span id="cb113-5"><a href="#cb113-5"></a>            <span class="at">size =</span> pop)) <span class="sc">+</span></span>
+<span id="cb113-6"><a href="#cb113-6"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb113-7"><a href="#cb113-7"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb113-8"><a href="#cb113-8"></a><span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Health and wealth grow together"</span>,</span>
+<span id="cb113-9"><a href="#cb113-9"></a>     <span class="at">subtitle =</span> <span class="st">"Data from 1952 to 2007"</span>,</span>
+<span id="cb113-10"><a href="#cb113-10"></a>     <span class="at">x =</span> <span class="st">"Wealth (GDP per capita)"</span>,</span>
+<span id="cb113-11"><a href="#cb113-11"></a>     <span class="at">y =</span> <span class="st">"Health (life expectancy)"</span>,</span>
+<span id="cb113-12"><a href="#cb113-12"></a>     <span class="at">color =</span> <span class="st">"Continent"</span>,</span>
+<span id="cb113-13"><a href="#cb113-13"></a>     <span class="at">size =</span> <span class="st">"Population"</span>,</span>
+<span id="cb113-14"><a href="#cb113-14"></a>  <span class="at">caption =</span> <span class="st">"Source: The Gapminder Project"</span>) <span class="sc">+</span></span>
+<span id="cb113-15"><a href="#cb113-15"></a>    <span class="fu">theme_allen_bw</span>(<span class="at">has_subtitle =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-43-1.png" width="1000"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-44-1.png" width="1000"></p>
 </div>
 </div>
 </div>
@@ -3103,13 +3138,13 @@ Title of size legend
 <section id="saving-your-work" class="slide level2">
 <h2>Saving your work</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1"></a>your_plot_here <span class="ot">=</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> blah, <span class="at">y =</span> blah))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1"></a>your_plot_here <span class="ot">=</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> blah, <span class="at">y =</span> blah))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1"></a><span class="fu">ggsave</span>(<span class="st">"name-of-your-file.pdf"</span>,your_plot_here) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1"></a><span class="fu">ggsave</span>(<span class="st">"name-of-your-file.pdf"</span>,your_plot_here) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1"></a><span class="fu">ggsave</span>(<span class="st">"name-of-your-file.png"</span>,your_plot_here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1"></a><span class="fu">ggsave</span>(<span class="st">"name-of-your-file.png"</span>,your_plot_here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="footer footer-default">
 

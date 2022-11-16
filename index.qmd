@@ -2117,13 +2117,9 @@ The labs argument has a ton of flexibility. Basically if you feed something into
 
 ## Changing the Default Theme 
 
-::::{.columns}
-::: {.column width="45%"}
-
-### theme_minimal
-
-```{r theme-minimal-theme-out, echo = FALSE}
-
+::: {layout-ncol="2"}
+```{r theme-minimal-theme-out, echo = TRUE, out.width = "80%"}
+#| code-fold: true
 ggplot(gapminder, 
        aes(x = gdpPercap,
         y = lifeExp, 
@@ -2131,25 +2127,23 @@ ggplot(gapminder,
             size = pop)) +
   geom_point(alpha = 0.5) +
   scale_x_log10() +
-  labs(title = "Health and wealth grow together",
-       subtitle = "Data from 1952 to 2007",
+    labs(title = "Health and wealth grow together",
+       subtitle = "Data from 2007",
        x = "Wealth (GDP per capita)",
        y = "Health (life expectancy)",
        color = "Continent",
        size = "Population",
-       caption = "Source: The Gapminder Project") +
+       caption = "Source: The Gapminder Project") + 
        theme_minimal()
+
+
+
 ```
 
+:::fragment
 
-:::
-
-
-::: {.column width="45%"}
-
-### theme_dark
-```{r theme-dark-theme-out, echo = FALSE}
-
+```{r out.width = "80%"}
+#| code-fold: true
 ggplot(gapminder, 
        aes(x = gdpPercap,
         y = lifeExp, 
@@ -2157,8 +2151,8 @@ ggplot(gapminder,
             size = pop)) +
   geom_point(alpha = 0.5) +
   scale_x_log10() +
-  labs(title = "Health and wealth grow together",
-       subtitle = "Data from 1952 to 2007",
+    labs(title = "Health and wealth grow together",
+       subtitle = "Data from 2007",
        x = "Wealth (GDP per capita)",
        y = "Health (life expectancy)",
        color = "Continent",
@@ -2168,9 +2162,7 @@ ggplot(gapminder,
 ```
 
 :::
-::::
-
-
+:::
 
 ## Themes in the wild
 
