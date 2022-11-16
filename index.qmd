@@ -1714,39 +1714,6 @@ ggplot(gapminder,
 
 
 
-## Scales
-
-<table>
-  <tr>
-    <th class="cell-left">Example layer</th>
-    <th class="cell-left">What it does</th>
-  </tr>
-  <tr>
-    <td class="cell-left"><code class="remark-inline-code">scale_x_continuous()</code></td>
-    <td class="cell-left">Make the x-axis continuous</td>
-  </tr>
-  <tr>
-    <td class="cell-left"><code class="remark-inline-code">scale_x_continuous(breaks = 1:5)&ensp;</code></td>
-    <td class="cell-left">Manually specify axis ticks</td>
-  </tr>
-  <tr>
-    <td class="cell-left"><code class="remark-inline-code">scale_x_log10()</code></td>
-    <td class="cell-left">Log the x-axis</td>
-  </tr>
-  <tr>
-    <td class="cell-left"><code class="remark-inline-code">scale_color_gradient()</code></td>
-    <td class="cell-left">Use a gradient</td>
-  </tr>
-  <tr>
-    <td class="cell-left"><code class="remark-inline-code">scale_fill_viridis_d()</code></td>
-    <td class="cell-left">Fill with discrete viridis colors</td>
-  </tr>
-</table>
-
-
-:::{.notes}
-Often time we need to or want to adjust the scales that one or more of the axis are on or we pass off color arguments to 
-:::
 
 
 ## Scales
