@@ -507,7 +507,7 @@ R as a calculator and evaluating whether 1 is greater than 2 gets very tiring li
 </center>
 
 
-## Assignment 
+## Assignment {.scrollable}
 
 - The most popular assigment operator in R is `<-` which is just `<` followed by `-`
   - read aloud as "gets"

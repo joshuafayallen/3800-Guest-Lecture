@@ -1,0 +1,4 @@
+- source: index.qmd
+  netlify:
+    - id: ce3d8d10-7487-410b-9957-79de5a65b5ac
+      url: 'https://3800-ggplot-demo.netlify.app'
