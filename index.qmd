@@ -821,6 +821,37 @@ cor(penguins$bill_length_mm, penguins$body_mass_g, use = "complete")
 :::
 
 
+## Very Basic Analysis {.scrollable}
+- Our $H_0$ is that the body mass of  Adelie Penguins are not different then other penguins
+- and our $H_a$ is that the body mass of Adelie Penguins are different than other penguins 
+
+. . .
+
+::: {.fragment fragment-index=1}
+```{r}
+# gets rid of missing values 
+penguins_t_test = na.omit(penguins)
+
+penguins_t_test$gentoo = ifelse(penguins_t_test$species == "Gentoo", TRUE, FALSE)
+
+```
+
+:::
+
+- Next we can use a simple t-test
+
+. . .
+
+:::{.fragment fragment-index=2}
+
+```{r}
+t.test(body_mass_g ~ gentoo, data = penguins_t_test)
+```
+
+:::
+
+
+
 
 # Graphing your data {background-color="`r clrs[3]`" .white}
 
